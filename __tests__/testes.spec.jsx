@@ -53,3 +53,12 @@ describe('Deve retornar a classificação certa', () => {
         expect(classificação).toBe('Normal');
     });
 });
+
+describe('Altura vazia', () => {
+    test('Deve retornar -1 se altura for vazia', () => {
+        const peso = 100;
+        const altura = null;
+        const IMC = calcularIMC(peso, altura);
+        expect(IMC).toBe(-1);
+    });
+});
